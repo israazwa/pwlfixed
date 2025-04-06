@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class laporanFasilitas extends Model
 {
 
-    protected $allowedFields = ['id', 'email', 'nama', 'text', 'content', 'created', 'confirm'];
+    protected $allowedFields = ['id', 'email', 'foto', 'nama', 'jenis', 'content', 'masalah', 'created', 'confirm'];
 
     protected $table = 'laporanFasilitas';
 

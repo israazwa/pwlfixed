@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-sm-6 d-flex align-items-center">
                             <button class="tombol"
-                                onclick="window.location.href='<?php echo base_url('/adminhero'); ?>'">- CRUD
+                                onclick="window.location.href='<?php echo base_url('/adminlprr'); ?>'">- CRUD
                                 -</button>
                             <p class="ms-2 font-monospace"><b>Laporan User</b></p>
                         </div>

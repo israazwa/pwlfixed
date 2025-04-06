@@ -1,5 +1,6 @@
 <?php
 
+use CodeIgniter\Router\Exceptions\RouterException;
 use CodeIgniter\Router\RouteCollection;
 
 /**
@@ -34,4 +35,14 @@ $routes->post('/cards/create', 'cardIcon::create');
 $routes->get('/cards/update/(:num)', 'cardIcon::update/$1');
 $routes->post('/cards/update/(:num)', 'cardIcon::update/$1');
 $routes->get('/cards/delete/(:num)', 'cardIcon::delete/$1');
+/*AboutUsHome*/
+$routes->get('/about', 'aboutUs::index');
+/*Halaman Admin lpr Fasil*/
+$routes->get('/adminlprr', 'laporanFasil::index');
+$routes->post('/adminlprr/update/(:num)', 'laporanFasil::update/$1');
+$routes->post('/adminlprr/delete/(:num)', 'laporanFasil::delete/$1');
+
+/*Halaman Laporan User*/
+$routes->get('/laporfasilitas', 'userFasilitas::index');
+$routes->post('/laporfasilitas/lapor1', 'userFasilitas::store');
 

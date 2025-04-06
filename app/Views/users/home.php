@@ -60,15 +60,17 @@
         .content h1 {
             margin-bottom: 1px;
             color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .content p {
             color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .tombolLapor {
             padding: 5px 20px;
-            background-color: rgb(255, 111, 0);
+            background: rgb(255, 89, 0);
             color: azure;
             border-radius: 5px;
             border: none;
@@ -78,7 +80,7 @@
         }
 
         .tombolLapor:hover {
-            background-color: rgb(196, 108, 1);
+            background: rgb(177, 62, 0);
             box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
             transform: scale(0.95);
         }
@@ -102,7 +104,7 @@
             <div class="content">
                 <h1 class="h1"><b>LABU, Laporan Buku</b></h1>
                 <p class="h5">Laporan Umum Perpustakaan</p>
-                <a href="<?= base_url('/about'); ?>"><button class="tombolLapor h5"><b>About Us!</b></button></a>
+                <a href="<?= base_url('/about'); ?>"><button class="tombolLapor h5"><b>Laporkan!</b></button></a>
             </div>
         </div>
     </section>
@@ -121,10 +123,10 @@
                 <p style="text-align: justify;"><?php foreach ($ikhtisar as $text) {
                     echo $text['content'];
                 } ?></p>
-                <a href="<?= base_url('/login'); ?>"><button class="tombolA h5"><b>About Us!</b></button></a>
+                <a href="<?= base_url('/about'); ?>"><button class="tombolA h5"><b>About Us!</b></button></a>
                 <style>
                     .tombolA {
-                        background-color: rgb(255, 102, 0);
+                        background: rgb(255, 89, 0);
                         color: white;
                         padding: 7px 17px;
                         border-radius: 3px;
@@ -132,7 +134,7 @@
                     }
 
                     .tombolA:hover {
-                        background-color: rgb(189, 101, 0);
+                        background: rgb(150, 52, 0);
                         box-shadow: 0px 6px 10px rgba(0.2, 0.2, 0.2, 0.5);
                         transform: scale(0.95);
                         transition: transform 0.3s ease, box-shadow 0.3s ease;

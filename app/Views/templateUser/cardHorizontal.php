@@ -77,12 +77,12 @@
 <div class="container-fluid">
     <div class="rowC">
         <div class="section">
-            <a href=""><img src="<?= base_url('logo.png'); ?>" alt="##">
+            <a href="/laporfasilitas"><img src="<?= base_url('logo.png'); ?>" alt="##">
                 <div class="caption">Draft Laporan Buku</div>
             </a>
         </div>
         <div class="section">
-            <a href=""><img src="<?= base_url('logo.png'); ?>" alt="###">
+            <a href="/laporfasilitas"><img src="<?= base_url('logo.png'); ?>" alt="###">
                 <div class="caption">Draft Laporan Fasilitas</div>
             </a>
         </div>

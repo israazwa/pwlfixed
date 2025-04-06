@@ -22,7 +22,7 @@ class heroAdmin extends BaseController
     {
         $homepic = new heroPicture();
 
-        $image = $this->request->getFile('image'); // Ambil file gambar dari input
+        $image = $this->request->getFile('image');
         $fileName = null;
 
 
@@ -48,16 +48,12 @@ class heroAdmin extends BaseController
     {
         $homepic = new heroPicture();
 
-        // Cari data berdasarkan ID
         $record = $homepic->find($id);
 
         if ($record) {
-            // Hapus file dari direktori jika ada
             if (!empty($record['content']) && file_exists(WRITEPATH . '../public/' . $record['content'])) {
                 unlink(WRITEPATH . '../public/' . $record['content']);
             }
-
-            // Hapus data dari database
             if ($homepic->delete($id)) {
                 return redirect()->to('/adminhero')->with('success', 'Data berhasil dihapus!');
             } else {
@@ -71,8 +67,6 @@ class heroAdmin extends BaseController
     public function update($id)
     {
         $homepic = new heroPicture();
-
-        // Cari data berdasarkan ID
         $record = $homepic->find($id);
 
         if (!$record) {
@@ -109,10 +103,7 @@ class heroAdmin extends BaseController
 
     public function logout()
     {
-        // Hancurkan semua session
         session()->destroy();
-
-        // Redirect ke halaman login atau homepage
         return redirect()->to('/login')->with('success', 'Anda telah logout.');
     }
 

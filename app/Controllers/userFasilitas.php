@@ -30,8 +30,7 @@ class userFasilitas extends BaseController
     {
         $laporanUser = new laporanFasilitas();
 
-        // Ambil data dari form
-        $image = $this->request->getFile('image'); // Ambil file gambar dari input
+        $image = $this->request->getFile('image');
         $fileName = null;
 
 

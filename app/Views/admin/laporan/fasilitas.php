@@ -25,7 +25,6 @@
             </div>
         <?php endif; ?>
 
-        <!-- Tabel Data -->
         <div class="table-responsive mb-4">
             <table class="table table-striped table-bordered text-center">
                 <thead>

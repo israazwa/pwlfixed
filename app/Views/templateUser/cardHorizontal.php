@@ -93,7 +93,7 @@
         </div>
         <div class="section">
             <a href=""><img src="<?= base_url('logo.png'); ?>" alt="I#">
-                <div class="caption">Draft Lorem, ipsum dolor.</div>
+                <div class="caption">Statistik Laporan</div>
             </a>
         </div>
     </div>

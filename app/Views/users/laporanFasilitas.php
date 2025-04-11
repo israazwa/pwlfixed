@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<header class="fs-xl mt-5 mb-4 text-center">
+
+<header class="fs-xl mb-2 text-center">
     <h2><b>FORM LAPORAN</b></h2>
 </header>
 <div class="container-md">
@@ -15,13 +16,12 @@
                     alertDiv.style.display = 'block';
                     return false;
                 }
-                alertDiv.style.display = 'none'; // Hide alert if valid
+                alertDiv.style.display = 'none';
                 return true;
             }
         </script>
-        <!-- Form Tambah Data -->
         <div class="card">
-            <div class="card-header">Tambah Data</div>
+            <div class="card-header">Form Laporan Fasilitas</div>
             <div class="card-body">
                 <?= csrf_field(); ?>
                 <div class="row mb-3">
@@ -96,7 +96,7 @@
     <div class="container mb-5">
         <div class="text mt-5 mb-2 text-center">
             <h5>5 Laporan Teratas</h5>
-            <p>sistem FIFO <i>'first in fisrt out'</i></p>
+            <p>sistem FIFO <i>'first in first out'</i></p>
         </div>
         <div class="table-responsive">
             <table class="table table-striped text-center">
@@ -113,19 +113,10 @@
                     <?php
                     $maxData = 5;
                     $totalData = count($record);
-                    for ($i = 0; $i < min($maxData, $totalData); $i++):
-                        ?>
-                        <tr>
-                            <td><?= $i + 1 ?></td>
-                            <td><?= $record[$i]['nama']; ?></td>
-                            <td><?= $record[$i]['jenis']; ?></td>
-                            <td><?= $record[$i]['content']; ?></td>
-                            <td><?= $record[$i]['created']; ?></td>
-                        </tr>
-                    <?php endfor; ?>
-                    <?php if ($totalData < $maxData):
-                        for ($i = 0; $i < min($maxData, $totalData); $i++):
-                            ?>
+
+                    if ($totalData > 0) {
+                        // Tampilkan laporan berdasarkan jumlah data yang ada atau maksimal 5
+                        for ($i = 0; $i < min($maxData, $totalData); $i++): ?>
                             <tr>
                                 <td><?= $i + 1 ?></td>
                                 <td><?= $record[$i]['nama']; ?></td>
@@ -133,13 +124,22 @@
                                 <td><?= $record[$i]['content']; ?></td>
                                 <td><?= $record[$i]['created']; ?></td>
                             </tr>
-                            <p class="text-center bg-primary text-white mt-2 mb-2">DATA MASUK TIDAK MENCAPAI LIMA :b</p>
-                        <?php endfor; ?>
-                    <?php elseif ($totalData === 0): ?>
+                        <?php endfor;
+
+                        // Jika data kurang dari 5, tambahkan pemberitahuan
+                        if ($totalData < $maxData): ?>
+                            <tr>
+                                <td colspan="5" class="bg-secondary text-white">
+                                    <b>DATA MASUK TIDAK MENCAPAI LIMA</b>
+                                </td>
+                            </tr>
+                        <?php endif;
+                    } else { ?>
+                        <!-- Jika tidak ada data -->
                         <tr>
-                            <td colspan="5" class="bg-primary text-white"><b>Tidak ada laporan yang masuk.</b></td>
+                            <td colspan="5" class="bg-secondary text-white"><b>Tidak ada laporan yang masuk.</b></td>
                         </tr>
-                    <?php endif; ?>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

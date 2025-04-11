@@ -14,7 +14,9 @@ class pengumumanAdmin extends BaseController
             'pengumuman' => $model->findAll(),
         ];
 
-        return view('pengumuman/index', $data);
+        echo view('templateAdmin/header', $data);
+        echo view('admin/merah', $data);
+        return 0;
     }
 
     public function create()
@@ -29,8 +31,13 @@ class pengumumanAdmin extends BaseController
             'link' => $this->request->getPost('link'),
         ];
 
-        $model->insert($data);
-        return redirect()->to('/pengumuman');
+        if ($model->insert($data)) {
+            session()->setFlashdata('success', 'Pengumuman berhasil ditambahkan!');
+        } else {
+            session()->setFlashdata('error', 'Pengumuman gagal ditambahkan!');
+        }
+
+        return redirect()->to('/admin/pengumuman');
     }
 
     public function edit($id)
@@ -38,7 +45,7 @@ class pengumumanAdmin extends BaseController
         $model = new Pengumuman();
         $data = $model->find($id);
 
-        return view('pengumuman/edit', ['pengumuman' => $data]);
+        return view('/admin/pengumuman', ['pengumuman' => $data]);
     }
 
     public function update($id)
@@ -53,7 +60,7 @@ class pengumumanAdmin extends BaseController
         ];
 
         $model->update($id, $data);
-        return redirect()->to('/pengumuman');
+        return redirect()->to('/admin/pengumuman');
     }
 
     public function delete($id)
@@ -61,6 +68,6 @@ class pengumumanAdmin extends BaseController
         $model = new Pengumuman();
         $model->delete($id);
 
-        return redirect()->to('/pengumuman');
+        return redirect()->to('/admin/pengumuman');
     }
 }

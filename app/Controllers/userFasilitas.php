@@ -20,6 +20,7 @@ class userFasilitas extends BaseController
             ];
 
         echo view('templateUser/header', $data);
+        /*echo view('users/templateLaporan/headLaporan', $data);*/
         echo view('users/laporanFasilitas', $data);
         echo view('templateUser/footer', $data);
         return 0;

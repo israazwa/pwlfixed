@@ -11,50 +11,49 @@
     <div class="gradient">
         <br>
         <!--Start-->
-        <div class="container">
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 mt-2">
-                    <div class="pengumuman">
-                        <h5 class="text-center bg-danger text-white"><b>PENGUMUMAN</b></h5>
+        <?php foreach ($pengumuman as $h): ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8 mt-2">
+                        <div class="pengumuman">
+                            <h5 class="text-center bg-danger text-white"><b>PENGUMUMAN</b></h5>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+
+                    </div>
+                    <div class="col-8 mt-3" style="text-align: justify;">
+                        <?= $h['content']; ?>
+                    </div>
+                    <div class="col-2">
+
                     </div>
                 </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row">
-                <div class="col-2">
+                <div class="row">
+                    <div class="col-2">
 
-                </div>
-                <div class="col-8 mt-3" style="text-align: justify;">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, similique modi inventore nostrum id
-                    consequuntur maiores, doloremque temporibus numquam possimus omnis alias minima sunt quo dolor
-                    molestias earum provident quibusdam.
-                </div>
-                <div class="col-2">
+                    </div>
+                    <div class="col-4 text-truncate">
+                        <br>
+                        <p><b><?= $h['tgl']; ?></b> <br>
+                            <a href="<?= $h['link']; ?>"><?= $h['link']; ?></a>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p style="text-align: right;"><?= $h['pj']; ?><br><span
+                                style="text-align: center; font-size: small;">
+                                <?= $h['cp']; ?></span></p>
+                    </div>
+                    <div class="col-2">
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-
-                </div>
-                <div class="col-4">
-                    <br>
-                    <p><b>date</b> <br>
-                        <link rel="stylesheet" href="#">Lorem, ipsum.
-                    </p>
-                </div>
-                <div class="col-4">
-                    <p style="text-align: right;">Lorem ipsum dolor sit. <br><span
-                            style="text-align: center; font-size: small;">
-                            Lorem, ipsum dolor.</span></p>
-                </div>
-                <div class="col-2">
-
+                    </div>
                 </div>
             </div>
-        </div>
-
+        <?php endforeach; ?>
         <!--end-->
 
         <br>

@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\heroPicture;
 use App\Models\homeIkhtisar;
+use App\Models\pengumuman;
 
 class Home extends BaseController
 {
@@ -11,8 +12,11 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
-    public function index(): string
+    public function index(): int
     {
+        $pengumuman = new pengumuman();
+        $alert = $pengumuman->find();
+
         $homeIkhtisar = new homeIkhtisar();
         $text = $homeIkhtisar->findAll();
 
@@ -20,6 +24,7 @@ class Home extends BaseController
         $picture = $heroPic->findAll();
 
         $data = [
+            'pengumuman' => $alert,
             'ikhtisar' => $text,
             'dataset' => $picture,
             'title' => 'Home Page'
@@ -27,7 +32,7 @@ class Home extends BaseController
         echo view('templateUser/header', $data);
         echo view('users/home', $data);
         echo view('templateUser/cardHorizontal');
-        echo view('templateUser/aftercard');
+        echo view('templateUser/aftercard', $data);
         echo view('templateUser/footer');
         return 0;
     }

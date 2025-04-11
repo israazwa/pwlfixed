@@ -9,6 +9,8 @@ class homeAdmin extends BaseController
 {
     public function index()
     {
+
+
         $Ikhtisar = new homeIkhtisar();
         $record = $Ikhtisar->findAll();
 

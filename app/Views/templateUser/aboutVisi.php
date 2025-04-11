@@ -4,7 +4,7 @@
         <div class="row align-items-center"> <!-- Tambahkan align-items-center pada row -->
             <div class="col-md-6 col-sm-12">
                 <!-- Konten yang akan ditampilkan berdasarkan activeButton -->
-                <div class="isi mx-2" x-show="activeButton === 1" id="cina">
+                <div class="isi mx-4" x-show="activeButton === 1" id="cina">
                     <p class="text-center">-- <b>Visi</b> --</p>
                     <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
                         vitae
@@ -19,7 +19,7 @@
                         molestiae, eum ex provident amet neque!</p>
                 </div>
 
-                <div class="isi mx-2" x-show="activeButton === 2" id="cina">
+                <div class="isi mx-4" x-show="activeButton === 2" id="cina">
                     <div class="row justify-content-center">
                         <div class="col-6 d-flex justify-content-center">
                             <img src="<?= base_url('logo.png'); ?>" alt="logo" style="max-width: 100%; height: auto;">
@@ -39,7 +39,7 @@
                         molestiae, eum ex provident amet neque!</p>
                 </div>
 
-                <div class="isi mx-2" x-show="activeButton === 3" id="cina">
+                <div class="isi mx-4" x-show="activeButton === 3" id="cina">
                     <div class="row justify-content-center">
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quis non rem fugit odit vel
@@ -47,7 +47,7 @@
                         accusantium sapiente labore!</p>
                 </div>
 
-                <div class="isi mx-2" x-show="activeButton === 4" id="cina">
+                <div class="isi mx-4" x-show="activeButton === 4" id="cina">
                     <div class="row justify-content-center">
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat eos voluptate nesciunt id?
@@ -57,7 +57,7 @@
             </div>
             <div class="col-md-6 col-sm-12 mt-4 justify-content-center">
                 <!-- pke alpinejs soale ez -->
-                <div class="container mx-2 my-3">
+                <div class="container mx-1 my-3">
                     <a href="#cina">
                         <div class="tombolAbout" @click="activeButton = 1">Visi Misi</div>
                     </a>

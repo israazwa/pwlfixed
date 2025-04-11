@@ -43,7 +43,7 @@
                         </div>
                         <div class="col-sm-6 d-flex align-items-center">
                             <button class="tombol"
-                                onclick="window.location.href='<?php echo base_url('your-target-link'); ?>'">- CRUD
+                                onclick="window.location.href='<?php echo base_url('/admin/pengumuman'); ?>'">- CRUD
                                 -</button>
                             <p class="ms-2 font-monospace"><b>Controller Pengumuman</b></p>
                         </div>

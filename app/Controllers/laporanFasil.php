@@ -17,7 +17,9 @@ class laporanFasil extends Controller
                 'data' => $bakso,
             ];
 
-        return view('/admin/laporan/fasilitas', $data);
+        echo view('templateAdmin/header', $data);
+        echo view('/admin/laporan/fasilitas', $data);
+        return 0;
     }
 
 
@@ -29,7 +31,7 @@ class laporanFasil extends Controller
 
         if ($data) {
             if (isset($data['foto']) && $data['foto'] != null) {
-                $filePath = WRITEPATH . '../public/' . $data['foto'];
+                $filePath = WRITEPATH . '../public/laporan/fasilitas/' . $data['foto'];
                 if (is_file($filePath)) {
                     unlink($filePath);
                 }

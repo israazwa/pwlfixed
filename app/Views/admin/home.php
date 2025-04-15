@@ -89,9 +89,8 @@
                                 enctype="multipart/form-data">
                                 <?= csrf_field() ?>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="content" id="content" class="form-control" id="floatingInput"
-                                        placeholder="new ikhtisar">
-                                    <label for="floatingInput">masukkan paragraph update</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content"
+                                        id="content" rows="3" placeholder="Update Ikhtisar"></textarea>
                                 </div>
                                 <p class="bg-warning mx-2 my-2 p-2 text-center"> Jika <b>Update kosong</b> maka yang
                                     terupload kosong!
@@ -158,6 +157,13 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+        <?php $password = 'apaLuCina!' ?>
+        <?php $hashedPassword = password_hash($password, PASSWORD_DEFAULT); ?>
+        <?/*= $hashedPassword; */ ?>
+        </div>
+
     </section>
 </body>
 

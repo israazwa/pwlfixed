@@ -37,7 +37,7 @@
                         <a class="nav-link" href="<?= base_url('/draflapor'); ?>">DaftarLaporan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/laporan'); ?>">Laporkan!</a>
+                        <a class="nav-link" href="<?= base_url('/laporbuku'); ?>">Laporkan!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href=" <?= base_url('/'); ?>" aria-disabled="true">Disabled</a>

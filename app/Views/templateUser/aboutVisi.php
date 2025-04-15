@@ -1,4 +1,5 @@
 <script src="//unpkg.com/alpinejs" defer></script>
+
 <section>
     <div class="containerd d-flex align-items-center justify-content-center my-5" x-data="{ activeButton: 1 }">
         <div class="row align-items-center"> <!-- Tambahkan align-items-center pada row -->

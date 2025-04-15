@@ -77,7 +77,7 @@
 <div class="container-fluid">
     <div class="rowC">
         <div class="section">
-            <a href="/laporfasilitas"><img src="<?= base_url('logo.png'); ?>" alt="##">
+            <a href="/laporbuku"><img src="<?= base_url('logo.png'); ?>" alt="##">
                 <div class="caption">Draft Laporan Buku</div>
             </a>
         </div>

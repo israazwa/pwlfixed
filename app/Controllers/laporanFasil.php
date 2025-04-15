@@ -18,6 +18,7 @@ class laporanFasil extends Controller
             ];
 
         echo view('templateAdmin/header', $data);
+        echo view('templateAdmin/dashboardLaporan', $data);
         echo view('/admin/laporan/fasilitas', $data);
         return 0;
     }

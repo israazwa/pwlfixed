@@ -24,30 +24,30 @@
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Isi Pengumuman</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="content"
-                            name="content"></textarea>
+                            name="content" required></textarea>
                     </div>
                 </div>
 
                 <div class="inputpj my-2 mx-1">
                     <label for="exampleFormControlInput1" class="form-label">Penanggung Jawab</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Penanggung Jawab"
-                        id="pj" name="pj">
+                        id="pj" name="pj" required>
                 </div>
 
                 <div class="inputcp my-2 mx-1">
                     <label for="exampleFormControlInput1" class="form-label">ContactPerson</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nomor Hp" id="cp"
-                        name="cp">
+                        name="cp" required>
                 </div>
 
                 <div class="linkPengumuman mx-1">
                     <label for="exampleFormControlInput1" class="form-label">Link Surat Resmi</label>
                     <input type="link" class="form-control" id="exampleFormControlInput1" placeholder="Link Gdrive"
-                        id="link" name="link">
+                        id="link" name="link" required>
                 </div>
 
                 <div class="tgl mt-3 mx-1">
-                    <input type="date" class="date-input" id="tgl" name="tgl">
+                    <input type="date" class="date-input" id="tgl" name="tgl" required>
                     <style>
                         .date-input {
                             border: 2px solid #4caf50;
@@ -72,12 +72,27 @@
                     </style>
                 </div>
                 <div class="keteranganUpload">
-                    <p></p>
                 </div>
-                <button type="submit " class="btn btn-primary mx-4 mb-5">
-                    Submit
-                </button>
+                <div class="tombol mt-3">
+                    <button type="submit " class="tombolcrud mx-3">
+                        <b>Submit</b>
+                    </button>
+                    <style>
+                        .tombolcrud {
+                            background: rgb(245, 69, 0);
+                            padding: 5px 14px;
+                            border: none;
+                            border-radius: 5px;
+                            color: white;
+                        }
 
+                        .tombolcrud:hover {
+                            background: rgb(146, 41, 0);
+                            transition: all 0.3s ease;
+                            transform: scale(0.86);
+                        }
+                    </style>
+                </div>
             </div>
         </form>
     </div>

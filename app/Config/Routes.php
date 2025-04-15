@@ -46,3 +46,6 @@ $routes->post('/adminlprr/delete/(:num)', 'laporanFasil::delete/$1');
 $routes->get('/laporfasilitas', 'userFasilitas::index');
 $routes->post('/laporfasilitas/lapor1', 'userFasilitas::store');
 
+/*Halaman User Laporan Buku*/
+$routes->get('/laporbuku', 'userBuku::index');
+$routes->post('/laporbuku/create', 'userBuku::create');

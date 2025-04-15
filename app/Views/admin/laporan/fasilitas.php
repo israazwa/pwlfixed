@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Fasilitas</title>
+    <title><?= $title; ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
+
+
 <body>
-    <div class="container mt-5">
-        <h2 class="mb-4">CRUD Fasilitas</h2>
+    <div class="container mt-1">
+        <h2 class="mb-4">Laporan Fasilitas</h2>
 
         <!-- Notifikasi Flash -->
         <?php if (session()->getFlashdata('success')): ?>
